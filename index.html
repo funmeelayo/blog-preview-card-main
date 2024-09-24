@@ -8,27 +8,137 @@
   
   <title>Frontend Mentor | Blog preview card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+     body{margin: 0;
+          padding: 0;
+          background-color: hsl(47, 88%, 63%);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          }
+    .card {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 9px 6px 0px rgb(0, 0, 0);
+            width: 400px;
+            overflow: hidden;
+        }
+    .illustration {
+            width: 94%;
+            border-radius: 16px;
+            margin: 12px 12px 0px;
+            
+        }
+
+    .card-content {
+            padding: 20px;
+        }
+     main{
+          display: flex;
+          flex-direction: column;
+          gap: 32px;
+        }
+    .card button {
+            background-color: hsl(47, 88%, 63%);
+            border: none;
+            border-radius: 4px;
+            color: rgb(10, 10, 10);
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 900;
+            margin-bottom: 8px;
+        }
+
+     .card h6, .card h2, .card p {
+            margin: 12px 0;
+        }
+      .card h6 {
+            font-size: 12px;
+            color: #666;
+            
+        }
+
+      .card h2 {
+            font-size: 24px;
+            color: black;
+            font-weight: 900;
+        }
+
+      .card p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.5;
+           
+        }
+
+      .author {
+            display: flex;
+            align-items: center;
+            margin-top: 12px;
+        }
+          
+      .author img{
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-right: 8px;
+        }
+
+        .author h6 {
+            margin: 0;
+            font-size: 14px;
+            color: black;
+            font-weight: 900;
+        }
+    
+        .card h2:hover{
+          color: hsl(47, 88%, 63%);
+          cursor: pointer;
+        }
+
+         /* Media query for mobile devices (max-width: 375px) */
+         @media only screen and (max-width: 375px) {
+            .card {
+                width: 100%; /* Full width for mobile devices */
+                max-width: 375px;
+            }
+
+            body {
+                padding: 20px;
+            }
+        }
+
+        
+
   </style>
 </head>
-<body>
-
-  Learning
-
-  Published 21 Dec 2023
-
-  HTML & CSS foundations
-
-  These languages are the backbone of every website, defining structure, content, and presentation.
-
-  Greg Hooper
-  
+<body style="background-color: hsl(47, 88%, 63%)
+;">
+   <main>
+   <div class="card">
+        <img class="illustration" src="/assets/images/illustration-article.svg" alt="Illustration">
+        <div class="card-content">
+          <button>Learning</button>
+          <h6>Published 21 Dec 2023</h6>
+          <h2>HTML & CSS foundations</h2>
+          <p>  These languages are the backbone of every website, defining structure, content, and presentation.</p>
+            <div class="author">
+              <img src="/assets/images/image-avatar.webp" alt="">
+              <h6>Greg Hooper</h6>
+            </div>
+        </div>
+    </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+</main>
 </body>
 </html>
